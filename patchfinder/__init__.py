@@ -1,2 +1,2 @@
-from patchfinder import *
+from patchfind import *
 import plugin

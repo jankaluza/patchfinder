@@ -1,3 +1,4 @@
+#!/usr/bin/python
 import sys
 from patchfinder import PatchFinder
 import os
