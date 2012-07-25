@@ -4,11 +4,15 @@ from collections import OrderedDict
 import urllib
 from lxml import etree
 import pickle
+import os
 
 class GentooPlugin(Plugin):
 	def __init__(self):
 		self.name = 'Gentoo'
-		pkl_file = open('gentoo.db', 'rb')
+		if os.path.exists('gentoo.db'):
+			pkl_file = open('gentoo.db', 'rb')
+		else:
+			pkl_file = open('/usr/share/patchfinder/gentoo.db', 'rb')
 		self.packages = pickle.load(pkl_file)
 		pkl_file.close()
 
