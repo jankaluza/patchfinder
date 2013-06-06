@@ -3,6 +3,7 @@ from patchfinder.patch import Patch
 from collections import OrderedDict
 import urllib
 from lxml import etree
+import sys
 
 class ArchLinuxPlugin(Plugin):
 	def __init__(self):
@@ -12,7 +13,7 @@ class ArchLinuxPlugin(Plugin):
 		if component.find("/") != -1:
 			component = component.split('/')[1]
 		ret = {}
-		print "Downloading Arch Linux version info"
+		print >> sys.stderr, "Downloading Arch Linux version info"
 		url = "http://www.archlinux.org/packages/?sort=&arch=i686&q=%s&maintainer=&last_update=&flagged=&limit=200" % (component)
 		f = urllib.urlopen(url)
 		data = f.read()
@@ -40,7 +41,7 @@ class ArchLinuxPlugin(Plugin):
 		ret = {}
 		ret[version] = OrderedDict()
 
-		print "Downloading Arch Linux patches list"
+		print >> sys.stderr, "Downloading Arch Linux patches list"
 		url = hrefs[0].attrib['href']
 		f = urllib.urlopen(url)
 		data = f.read()

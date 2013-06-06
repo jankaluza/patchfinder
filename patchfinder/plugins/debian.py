@@ -3,6 +3,7 @@ from patchfinder.patch import Patch
 from collections import OrderedDict
 import urllib
 from lxml import etree
+import sys
 
 class DebianPlugin(Plugin):
 	def __init__(self):
@@ -12,7 +13,7 @@ class DebianPlugin(Plugin):
 		if component.find("/") != -1:
 			component = component.split('/')[1]
 		ret = {}
-		print "Downloading Debian version list"
+		print >> sys.stderr, "Downloading Debian version list"
 		url = "http://patch-tracker.debian.org/package/%s" % (component)
 		f = urllib.urlopen(url)
 		data = f.read()
@@ -29,7 +30,7 @@ class DebianPlugin(Plugin):
 			if not ret.has_key(version):
 				ret[version] = OrderedDict()
 
-			print "Downloading patches list for version", version
+			print >> sys.stderr, "Downloading patches list for version", version
 			f = urllib.urlopen(url)
 			data = f.read()
 			f.close()
@@ -39,7 +40,7 @@ class DebianPlugin(Plugin):
 			if len(table) == 0:
 				del ret[version]
 				ret[version + " - error parsing data fetched from " + url] = OrderedDict()
-				print "Error parsing data fetched from", url
+				print >> sys.stderr, "Error parsing data fetched from", url
 				continue
 			elif len(table) == 1:
 				continue

@@ -6,8 +6,14 @@ import urwid
 import urllib
 import tempfile
 
+html = False
+args = sys.argv[1:]
+if args[0] == "--html":
+	html = True
+	args = args[1:]
+
 pf = PatchFinder()
-patches = pf.get_patches(sys.argv[1:])
+patches = pf.get_patches(args)
 
 class PatchWidget(urwid.TreeWidget):
 	unexpanded_icon = urwid.AttrMap(urwid.TreeWidget.unexpanded_icon,
@@ -185,9 +191,49 @@ class PatchBrowser:
 		if k in ('q','Q'):
 			raise urwid.ExitMainLoop()
 
+def generateHTML():
+	global patches
+	ret = ""
+
+	ret += "<html><head><title>Patches for " + args[0] + "</title>"
+	ret += "</head>\n"
+	ret += "<body>\n"
+	ret += "<h1>Patches for " + args[0] + "</h1>\n"
+
+	# generate TOC
+	ret += "<ul>\n"
+	for plugin, versions in patches.iteritems():
+		ret += '<li><a href="#' + plugin + '">' + plugin + "</a>\n"
+		ret += "<ul>"
+		for version, patchset in versions.iteritems():
+			ret += '<li><a href="#' + plugin + version + '">' + version + "</a>\n"
+		ret += "</ul>"
+	ret += "</ul>\n"
+	
+	# generate data
+	for plugin, versions in patches.iteritems():
+		ret += "<a name =\"" + plugin + "\"></a>"
+		ret += "<h2 name=\"" + plugin + "\">Plugin: " + plugin + "</h2>\n"
+		for version, patchset in versions.iteritems():
+			ret += "<a name =\"" + plugin + version + "\"></a>"
+			ret += "<h3>Version: " + version + "</h3>\n"
+			ret += "<ul>\n"
+			for name, p in patchset.iteritems():
+				ret += "<li>"
+				ret += "<a href=\"" + p.url + "\">" + p.name + "</a>"
+				ret += "</li>\n"
+			ret += "</ul>\n"
+	ret += "</body></html>\n"
+
+	return ret
+	
 
 def main():
-	PatchBrowser().main()
+	if html:
+		print generateHTML()
+	else:
+		PatchBrowser().main()
+		
 
 if __name__=="__main__": 
 	main()

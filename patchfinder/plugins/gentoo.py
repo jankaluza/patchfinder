@@ -5,6 +5,7 @@ import urllib
 from lxml import etree
 import pickle
 import os
+import sys
 
 class GentooPlugin(Plugin):
 	def __init__(self):
@@ -30,7 +31,7 @@ class GentooPlugin(Plugin):
 		version = ""
 		for cat in categories:
 
-			print "Downloading Gentoo version info for", component, "in category", cat
+			print >> sys.stderr, "Downloading Gentoo version info for", component, "in category", cat
 			url = "http://sources.gentoo.org/cgi-bin/viewvc.cgi/gentoo-x86/%s/%s" % (cat, component)
 			f = urllib.urlopen(url)
 			data = f.read()
@@ -45,12 +46,12 @@ class GentooPlugin(Plugin):
 				continue
 
 
-		print "Downloading Gentoo patches list"
+		print >> sys.stderr, "Downloading Gentoo patches list"
 		url = "http://sources.gentoo.org/cgi-bin/viewvc.cgi/gentoo-x86/%s/%s/files/" % (category, component)
 		f = urllib.urlopen(url)
 		data = f.read()
 		f.close()
-		#print data
+		#print >> sys.stderr, data
 
 		ret[version] = OrderedDict()
 

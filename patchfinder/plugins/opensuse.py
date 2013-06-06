@@ -3,6 +3,7 @@ from patchfinder.patch import Patch
 from collections import OrderedDict
 import urllib
 from lxml import etree
+import sys
 
 class OpenSUSEPlugin(Plugin):
 	def __init__(self):
@@ -12,7 +13,7 @@ class OpenSUSEPlugin(Plugin):
 		if component.find("/") != -1:
 			component = component.split('/')[1]
 		ret = {}
-		print "Downloading openSUSE patches list for", component
+		print >> sys.stderr, "Downloading openSUSE patches list for", component
 		url = "https://build.opensuse.org/package/files?package=%s&project=openSUSE:Factory" % (component)
 		f = urllib.urlopen(url)
 		data = f.read()
