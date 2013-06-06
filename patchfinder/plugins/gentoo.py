@@ -38,12 +38,12 @@ class GentooPlugin(Plugin):
 			f.close()
 
 			hrefs = etree.HTML(data).xpath("//*[contains(@name,'.ebuild')]")
-			try:
-				version = hrefs[0].attrib['name']
-				category = cat
-				break
-			except:
+			if len(hrefs) == 0:
 				continue
+			for href in hrefs:
+				version += href.attrib['name'] + " "
+			category = cat
+			break
 
 
 		print >> sys.stderr, "Downloading Gentoo patches list"
