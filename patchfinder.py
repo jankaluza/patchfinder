@@ -22,6 +22,7 @@ class PatchWidget(urwid.TreeWidget):
 		'dirmark')
 
 	def __init__(self, node, name, url = ""):
+		self.downloaded = False
 		self.name = name
 		self.url = url
 		self.__super.__init__(node)
@@ -59,6 +60,17 @@ class PatchWidget(urwid.TreeWidget):
 				f.close()
 				os.remove(name)
 				self.update_w()
+		elif key == 'd':
+			if self.url != '':
+				f = urllib.urlopen(self.url)
+				data = f.read()
+				f.close()
+				f = open(self.name, "w")
+				f.write(data)
+				f.close()
+				self.downloaded = True
+				#self.update_widget()
+				self.update_w()
 		else:
 			return key
 
@@ -72,8 +84,10 @@ class PatchWidget(urwid.TreeWidget):
 
 	def get_display_text(self):
 		text = self.name
+		if self.downloaded:
+			text += " (downloaded)"
 		if self.url != '':
-			text += " " * (80 - len(self.name)) + self.url
+			text += " " * (80 - len(text)) + self.url
 		return text
 
   
@@ -166,7 +180,9 @@ class PatchBrowser:
 		('key', "LEFT"), "  ",
 		('key', "HOME"), "  ", 
 		('key', "END"), "  ",
-		('key', "Q"),
+		('key', "RETURN - show in less"), "  ",
+		('key', "Q - quit"), "  ",
+		('key', "D - download"),
 		]
 	
 	
