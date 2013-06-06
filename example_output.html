@@ -1,0 +1,142 @@
+<html><head><title>Patches for apache2</title></head>
+<body>
+<h1>Patches for apache2</h1>
+<ul>
+<li><a href="#openSUSE">openSUSE</a>
+<ul><li><a href="#openSUSEUnknown">Unknown</a>
+</ul><li><a href="#ArchLinux">ArchLinux</a>
+<ul><li><a href="#ArchLinuxapache_2.2.24-3">apache 2.2.24-3</a>
+</ul><li><a href="#Debian">Debian</a>
+<ul><li><a href="#Debian2.2.22-13">2.2.22-13</a>
+<li><a href="#Debian2.4.4-5">2.4.4-5</a>
+<li><a href="#Debian2.2.16-6+squeeze10">2.2.16-6+squeeze10</a>
+</ul><li><a href="#Gentoo">Gentoo</a>
+<ul><li><a href="#Gentooapache-2.2.24-r1.ebuild_apache-2.2.24.ebuild_apache-2.4.4-r3.ebuild_apache-2.4.4.ebuild_">apache-2.2.24-r1.ebuild apache-2.2.24.ebuild apache-2.4.4-r3.ebuild apache-2.4.4.ebuild </a>
+</ul><li><a href="#Ubuntu">Ubuntu</a>
+<ul><li><a href="#Ubuntuunknown">unknown</a>
+</ul></ul>
+<a name ="openSUSE"></a><h2 name="openSUSE">Plugin: openSUSE</h2>
+<a name ="openSUSEUnknown"></a><h3>Version: Unknown</h3>
+<ul>
+<li><a href="https://api.opensuse.org/public/source/openSUSE:Factory/apache2/apache2-mod_ssl_npn.patch">apache2-mod_ssl_npn.patch</a></li>
+<li><a href="https://api.opensuse.org/public/source/openSUSE:Factory/apache2/apache2.4-mpm-itk-2.4.2-01.patch">apache2.4-mpm-itk-2.4.2-01.patch</a></li>
+<li><a href="https://api.opensuse.org/public/source/openSUSE:Factory/apache2/httpd-2.2.19-linux3.patch">httpd-2.2.19-linux3.patch</a></li>
+<li><a href="https://api.opensuse.org/public/source/openSUSE:Factory/apache2/httpd-2.2.x-bnc690734.patch">httpd-2.2.x-bnc690734.patch</a></li>
+<li><a href="https://api.opensuse.org/public/source/openSUSE:Factory/apache2/httpd-2.x.x-logresolve.patch">httpd-2.x.x-logresolve.patch</a></li>
+</ul>
+<a name ="ArchLinux"></a><h2 name="ArchLinux">Plugin: ArchLinux</h2>
+<a name ="ArchLinuxapache_2.2.24-3"></a><h3>Version: apache 2.2.24-3</h3>
+<ul>
+<li><a href="https://projects.archlinux.org//svntogit/packages.git/plain/trunk/apachectl-confd.patch?h=packages/apache">apachectl-confd.patch</a></li>
+</ul>
+<a name ="Debian"></a><h2 name="Debian">Plugin: Debian</h2>
+<a name ="Debian2.2.22-13"></a><h3>Version: 2.2.22-13</h3>
+<ul>
+<li><a href="http://patch-tracker.debian.org/patch/series/dl/apache2/2.2.22-13/004_usr_bin_perl_0wnz_j00">004_usr_bin_perl_0wnz_j00</a></li>
+<li><a href="http://patch-tracker.debian.org/patch/series/dl/apache2/2.2.22-13/008_make_include_safe">008_make_include_safe</a></li>
+<li><a href="http://patch-tracker.debian.org/patch/series/dl/apache2/2.2.22-13/009_apache2_has_dso">009_apache2_has_dso</a></li>
+<li><a href="http://patch-tracker.debian.org/patch/series/dl/apache2/2.2.22-13/010_fhs_compliance">010_fhs_compliance</a></li>
+<li><a href="http://patch-tracker.debian.org/patch/series/dl/apache2/2.2.22-13/032_suexec_is_shared">032_suexec_is_shared</a></li>
+<li><a href="http://patch-tracker.debian.org/patch/series/dl/apache2/2.2.22-13/033_dbm_read_hash_or_btree">033_dbm_read_hash_or_btree</a></li>
+<li><a href="http://patch-tracker.debian.org/patch/series/dl/apache2/2.2.22-13/038_no_LD_LIBRARY_PATH">038_no_LD_LIBRARY_PATH</a></li>
+<li><a href="http://patch-tracker.debian.org/patch/series/dl/apache2/2.2.22-13/045_suexec_log_cloexec">045_suexec_log_cloexec</a></li>
+<li><a href="http://patch-tracker.debian.org/patch/series/dl/apache2/2.2.22-13/047_fix_usage_message">047_fix_usage_message</a></li>
+<li><a href="http://patch-tracker.debian.org/patch/series/dl/apache2/2.2.22-13/052_logresolve_linelength">052_logresolve_linelength</a></li>
+<li><a href="http://patch-tracker.debian.org/patch/series/dl/apache2/2.2.22-13/057_disablemods">057_disablemods</a></li>
+<li><a href="http://patch-tracker.debian.org/patch/series/dl/apache2/2.2.22-13/058_suexec-CVE-2007-1742">058_suexec-CVE-2007-1742</a></li>
+<li><a href="http://patch-tracker.debian.org/patch/series/dl/apache2/2.2.22-13/067_fix_segfault_in_ab">067_fix_segfault_in_ab</a></li>
+<li><a href="http://patch-tracker.debian.org/patch/series/dl/apache2/2.2.22-13/071_fix_cacheenable">071_fix_cacheenable</a></li>
+<li><a href="http://patch-tracker.debian.org/patch/series/dl/apache2/2.2.22-13/073_mod_dav_trunk_fixes">073_mod_dav_trunk_fixes</a></li>
+<li><a href="http://patch-tracker.debian.org/patch/series/dl/apache2/2.2.22-13/074_link_support_progs_with_lcrypt">074_link_support_progs_with_lcrypt</a></li>
+<li><a href="http://patch-tracker.debian.org/patch/series/dl/apache2/2.2.22-13/075_mod_rewrite_literal_ipv6_redirect">075_mod_rewrite_literal_ipv6_redirect</a></li>
+<li><a href="http://patch-tracker.debian.org/patch/series/dl/apache2/2.2.22-13/077_CacheIgnoreURLSessionIdentifiers">077_CacheIgnoreURLSessionIdentifiers</a></li>
+<li><a href="http://patch-tracker.debian.org/patch/series/dl/apache2/2.2.22-13/079_polish_translation">079_polish_translation</a></li>
+<li><a href="http://patch-tracker.debian.org/patch/series/dl/apache2/2.2.22-13/082_ab_num_requests">082_ab_num_requests</a></li>
+<li><a href="http://patch-tracker.debian.org/patch/series/dl/apache2/2.2.22-13/083_dlopen_search_path">083_dlopen_search_path</a></li>
+<li><a href="http://patch-tracker.debian.org/patch/series/dl/apache2/2.2.22-13/084_customize_apxs.patch">084_customize_apxs.patch</a></li>
+<li><a href="http://patch-tracker.debian.org/patch/series/dl/apache2/2.2.22-13/085_mod_cache_partial_content-2.2.x.patch">085_mod_cache_partial_content-2.2.x.patch</a></li>
+<li><a href="http://patch-tracker.debian.org/patch/series/dl/apache2/2.2.22-13/086_upstream_trunk_bugfixes.patch">086_upstream_trunk_bugfixes.patch</a></li>
+<li><a href="http://patch-tracker.debian.org/patch/series/dl/apache2/2.2.22-13/087_mod_negotiation_CVE-2012-2687.patch">087_mod_negotiation_CVE-2012-2687.patch</a></li>
+<li><a href="http://patch-tracker.debian.org/patch/series/dl/apache2/2.2.22-13/201_build_suexec-custom">201_build_suexec-custom</a></li>
+<li><a href="http://patch-tracker.debian.org/patch/series/dl/apache2/2.2.22-13/dbmmanage-perl-510.patch">dbmmanage-perl-510.patch</a></li>
+<li><a href="http://patch-tracker.debian.org/patch/series/dl/apache2/2.2.22-13/SSLProtocol-tls11-12.2.patch">SSLProtocol-tls11-12.2.patch</a></li>
+<li><a href="http://patch-tracker.debian.org/patch/series/dl/apache2/2.2.22-13/disable-ssl-compression.patch">disable-ssl-compression.patch</a></li>
+<li><a href="http://patch-tracker.debian.org/patch/series/dl/apache2/2.2.22-13/CVE-2012-3499_CVE-2012-4558_XSS.patch">CVE-2012-3499_CVE-2012-4558_XSS.patch</a></li>
+<li><a href="http://patch-tracker.debian.org/patch/series/dl/apache2/2.2.22-13/mod_log_forensic_693292.patch">mod_log_forensic_693292.patch</a></li>
+</ul>
+<a name ="Debian2.4.4-5"></a><h3>Version: 2.4.4-5</h3>
+<ul>
+<li><a href="http://patch-tracker.debian.org/patch/series/dl/apache2/2.4.4-5/fhs_compliance.patch">fhs_compliance.patch</a></li>
+<li><a href="http://patch-tracker.debian.org/patch/series/dl/apache2/2.4.4-5/dbm_read_hash_or_btree.patch">dbm_read_hash_or_btree.patch</a></li>
+<li><a href="http://patch-tracker.debian.org/patch/series/dl/apache2/2.4.4-5/no_LD_LIBRARY_PATH.patch">no_LD_LIBRARY_PATH.patch</a></li>
+<li><a href="http://patch-tracker.debian.org/patch/series/dl/apache2/2.4.4-5/suexec-CVE-2007-1742.patch">suexec-CVE-2007-1742.patch</a></li>
+<li><a href="http://patch-tracker.debian.org/patch/series/dl/apache2/2.4.4-5/customize_apxs.patch">customize_apxs.patch</a></li>
+<li><a href="http://patch-tracker.debian.org/patch/series/dl/apache2/2.4.4-5/build_suexec-custom.patch">build_suexec-custom.patch</a></li>
+<li><a href="http://patch-tracker.debian.org/patch/series/dl/apache2/2.4.4-5/add-itk-to-build-system.patch">add-itk-to-build-system.patch</a></li>
+<li><a href="http://patch-tracker.debian.org/patch/series/dl/apache2/2.4.4-5/itk-hook-just-after-merging-perdir-config.patch">itk-hook-just-after-merging-perdir-config.patch</a></li>
+<li><a href="http://patch-tracker.debian.org/patch/series/dl/apache2/2.4.4-5/itk-fix-htaccess-reads-for-persistent-connections.patch">itk-fix-htaccess-reads-for-persistent-connections.patch</a></li>
+<li><a href="http://patch-tracker.debian.org/patch/series/dl/apache2/2.4.4-5/itk-rerun-configure.patch">itk-rerun-configure.patch</a></li>
+<li><a href="http://patch-tracker.debian.org/patch/series/dl/apache2/2.4.4-5/upstream-fixes">upstream-fixes</a></li>
+</ul>
+<a name ="Debian2.2.16-6+squeeze10"></a><h3>Version: 2.2.16-6+squeeze10</h3>
+<ul>
+<li><a href="http://patch-tracker.debian.org/patch/series/dl/apache2/2.2.16-6+squeeze10/001_branding">001_branding</a></li>
+<li><a href="http://patch-tracker.debian.org/patch/series/dl/apache2/2.2.16-6+squeeze10/004_usr_bin_perl_0wnz_j00">004_usr_bin_perl_0wnz_j00</a></li>
+<li><a href="http://patch-tracker.debian.org/patch/series/dl/apache2/2.2.16-6+squeeze10/008_make_include_safe">008_make_include_safe</a></li>
+<li><a href="http://patch-tracker.debian.org/patch/series/dl/apache2/2.2.16-6+squeeze10/009_apache2_has_dso">009_apache2_has_dso</a></li>
+<li><a href="http://patch-tracker.debian.org/patch/series/dl/apache2/2.2.16-6+squeeze10/010_fhs_compliance">010_fhs_compliance</a></li>
+<li><a href="http://patch-tracker.debian.org/patch/series/dl/apache2/2.2.16-6+squeeze10/031_apxs2_sucks_more">031_apxs2_sucks_more</a></li>
+<li><a href="http://patch-tracker.debian.org/patch/series/dl/apache2/2.2.16-6+squeeze10/032_suexec_is_shared">032_suexec_is_shared</a></li>
+<li><a href="http://patch-tracker.debian.org/patch/series/dl/apache2/2.2.16-6+squeeze10/033_dbm_read_hash_or_btree">033_dbm_read_hash_or_btree</a></li>
+<li><a href="http://patch-tracker.debian.org/patch/series/dl/apache2/2.2.16-6+squeeze10/034_apxs2_libtool_fixtastic">034_apxs2_libtool_fixtastic</a></li>
+<li><a href="http://patch-tracker.debian.org/patch/series/dl/apache2/2.2.16-6+squeeze10/038_no_LD_LIBRARY_PATH">038_no_LD_LIBRARY_PATH</a></li>
+<li><a href="http://patch-tracker.debian.org/patch/series/dl/apache2/2.2.16-6+squeeze10/042_htdigest_CAN-2005-1344">042_htdigest_CAN-2005-1344</a></li>
+<li><a href="http://patch-tracker.debian.org/patch/series/dl/apache2/2.2.16-6+squeeze10/045_suexec_log_cloexec.dpatch">045_suexec_log_cloexec.dpatch</a></li>
+<li><a href="http://patch-tracker.debian.org/patch/series/dl/apache2/2.2.16-6+squeeze10/047_fix_usage_message.dpatch">047_fix_usage_message.dpatch</a></li>
+<li><a href="http://patch-tracker.debian.org/patch/series/dl/apache2/2.2.16-6+squeeze10/052_logresolve_linelength.dpatch">052_logresolve_linelength.dpatch</a></li>
+<li><a href="http://patch-tracker.debian.org/patch/series/dl/apache2/2.2.16-6+squeeze10/057_disablemods.dpatch">057_disablemods.dpatch</a></li>
+<li><a href="http://patch-tracker.debian.org/patch/series/dl/apache2/2.2.16-6+squeeze10/058_suexec-CVE-2007-1742.dpatch">058_suexec-CVE-2007-1742.dpatch</a></li>
+<li><a href="http://patch-tracker.debian.org/patch/series/dl/apache2/2.2.16-6+squeeze10/067_fix_segfault_in_ab.dpatch">067_fix_segfault_in_ab.dpatch</a></li>
+<li><a href="http://patch-tracker.debian.org/patch/series/dl/apache2/2.2.16-6+squeeze10/069_no_deflate_for_HEAD.dpatch">069_no_deflate_for_HEAD.dpatch</a></li>
+<li><a href="http://patch-tracker.debian.org/patch/series/dl/apache2/2.2.16-6+squeeze10/071_fix_cacheenable.dpatch">071_fix_cacheenable.dpatch</a></li>
+<li><a href="http://patch-tracker.debian.org/patch/series/dl/apache2/2.2.16-6+squeeze10/073_mod_dav_trunk_fixes.dpatch">073_mod_dav_trunk_fixes.dpatch</a></li>
+<li><a href="http://patch-tracker.debian.org/patch/series/dl/apache2/2.2.16-6+squeeze10/074_link_support_progs_with_lcrypt.dpatch">074_link_support_progs_with_lcrypt.dpatch</a></li>
+<li><a href="http://patch-tracker.debian.org/patch/series/dl/apache2/2.2.16-6+squeeze10/075_mod_rewrite_literal_ipv6_redirect.dpatch">075_mod_rewrite_literal_ipv6_redirect.dpatch</a></li>
+<li><a href="http://patch-tracker.debian.org/patch/series/dl/apache2/2.2.16-6+squeeze10/076_apxs2_a2enmod.dpatch">076_apxs2_a2enmod.dpatch</a></li>
+<li><a href="http://patch-tracker.debian.org/patch/series/dl/apache2/2.2.16-6+squeeze10/077_CacheIgnoreURLSessionIdentifiers.dpatch">077_CacheIgnoreURLSessionIdentifiers.dpatch</a></li>
+<li><a href="http://patch-tracker.debian.org/patch/series/dl/apache2/2.2.16-6+squeeze10/079_polish_translation.dpatch">079_polish_translation.dpatch</a></li>
+<li><a href="http://patch-tracker.debian.org/patch/series/dl/apache2/2.2.16-6+squeeze10/080_mod_reqtimeout_fixes.dpatch">080_mod_reqtimeout_fixes.dpatch</a></li>
+<li><a href="http://patch-tracker.debian.org/patch/series/dl/apache2/2.2.16-6+squeeze10/082_ab_num_requests">082_ab_num_requests</a></li>
+<li><a href="http://patch-tracker.debian.org/patch/series/dl/apache2/2.2.16-6+squeeze10/083_mod_ssl_memcpy.dpatch">083_mod_ssl_memcpy.dpatch</a></li>
+<li><a href="http://patch-tracker.debian.org/patch/series/dl/apache2/2.2.16-6+squeeze10/084_mod_reqtimeout_CVE-2010-1623.dpatch">084_mod_reqtimeout_CVE-2010-1623.dpatch</a></li>
+<li><a href="http://patch-tracker.debian.org/patch/series/dl/apache2/2.2.16-6+squeeze10/085_CVE-2011-3192.dpatch">085_CVE-2011-3192.dpatch</a></li>
+<li><a href="http://patch-tracker.debian.org/patch/series/dl/apache2/2.2.16-6+squeeze10/086_range_regressions.dpatch">086_range_regressions.dpatch</a></li>
+<li><a href="http://patch-tracker.debian.org/patch/series/dl/apache2/2.2.16-6+squeeze10/087_mod_proxy_ajp_CVE-2011-3348.dpatch">087_mod_proxy_ajp_CVE-2011-3348.dpatch</a></li>
+<li><a href="http://patch-tracker.debian.org/patch/series/dl/apache2/2.2.16-6+squeeze10/089_CVE-2011-3368.dpatch">089_CVE-2011-3368.dpatch</a></li>
+<li><a href="http://patch-tracker.debian.org/patch/series/dl/apache2/2.2.16-6+squeeze10/090_CVE-2011-4317.dpatch">090_CVE-2011-4317.dpatch</a></li>
+<li><a href="http://patch-tracker.debian.org/patch/series/dl/apache2/2.2.16-6+squeeze10/091_CVE-2011-3639.dpatch">091_CVE-2011-3639.dpatch</a></li>
+<li><a href="http://patch-tracker.debian.org/patch/series/dl/apache2/2.2.16-6+squeeze10/092_CVE-2011-3607.dpatch">092_CVE-2011-3607.dpatch</a></li>
+<li><a href="http://patch-tracker.debian.org/patch/series/dl/apache2/2.2.16-6+squeeze10/093_CVE-2012-0031.dpatch">093_CVE-2012-0031.dpatch</a></li>
+<li><a href="http://patch-tracker.debian.org/patch/series/dl/apache2/2.2.16-6+squeeze10/094_CVE-2012-0053.dpatch">094_CVE-2012-0053.dpatch</a></li>
+<li><a href="http://patch-tracker.debian.org/patch/series/dl/apache2/2.2.16-6+squeeze10/095_send_408_status.dpatch">095_send_408_status.dpatch</a></li>
+<li><a href="http://patch-tracker.debian.org/patch/series/dl/apache2/2.2.16-6+squeeze10/096_mod_cache_partial_content-2.2.x.dpatch">096_mod_cache_partial_content-2.2.x.dpatch</a></li>
+<li><a href="http://patch-tracker.debian.org/patch/series/dl/apache2/2.2.16-6+squeeze10/097_CVE-2012-2687.dpatch">097_CVE-2012-2687.dpatch</a></li>
+<li><a href="http://patch-tracker.debian.org/patch/series/dl/apache2/2.2.16-6+squeeze10/099_config_guess_sub_update">099_config_guess_sub_update</a></li>
+<li><a href="http://patch-tracker.debian.org/patch/series/dl/apache2/2.2.16-6+squeeze10/200_cp_suexec.dpatch">200_cp_suexec.dpatch</a></li>
+<li><a href="http://patch-tracker.debian.org/patch/series/dl/apache2/2.2.16-6+squeeze10/201_build_suexec-custom.dpatch">201_build_suexec-custom.dpatch</a></li>
+<li><a href="http://patch-tracker.debian.org/patch/series/dl/apache2/2.2.16-6+squeeze10/202_suexec-custom.dpatch">202_suexec-custom.dpatch</a></li>
+<li><a href="http://patch-tracker.debian.org/patch/series/dl/apache2/2.2.16-6+squeeze10/300_disable-ssl-compression.dpatch">300_disable-ssl-compression.dpatch</a></li>
+<li><a href="http://patch-tracker.debian.org/patch/series/dl/apache2/2.2.16-6+squeeze10/301_CVE-2012-4557_proxy_ajp.dpatch">301_CVE-2012-4557_proxy_ajp.dpatch</a></li>
+</ul>
+<a name ="Gentoo"></a><h2 name="Gentoo">Plugin: Gentoo</h2>
+<a name ="Gentooapache-2.2.24-r1.ebuild_apache-2.2.24.ebuild_apache-2.4.4-r3.ebuild_apache-2.4.4.ebuild_"></a><h3>Version: apache-2.2.24-r1.ebuild apache-2.2.24.ebuild apache-2.4.4-r3.ebuild apache-2.4.4.ebuild </h3>
+<ul>
+<li><a href="http://sources.gentoo.org/cgi-bin/viewvc.cgi/gentoo-x86/www-servers/apache/files/httpd-2.4.3-mod_systemd.patch">httpd-2.4.3-mod_systemd.patch</a></li>
+</ul>
+<a name ="Ubuntu"></a><h2 name="Ubuntu">Plugin: Ubuntu</h2>
+<a name ="Ubuntuunknown"></a><h3>Version: unknown</h3>
+<ul>
+<li><a href="https://patches.ubuntu.com/a/apache2/apache2_2.2.22-6ubuntu5.patch">apache2_2.2.22-6ubuntu5.patch</a></li>
+</ul>
+</body></html>
+

@@ -206,7 +206,7 @@ def generateHTML():
 		ret += '<li><a href="#' + plugin + '">' + plugin + "</a>\n"
 		ret += "<ul>"
 		for version, patchset in versions.iteritems():
-			ret += '<li><a href="#' + plugin + version + '">' + version + "</a>\n"
+			ret += '<li><a href="#' + plugin + version.replace(' ', '_') + '">' + version + "</a>\n"
 		ret += "</ul>"
 	ret += "</ul>\n"
 	
@@ -215,7 +215,7 @@ def generateHTML():
 		ret += "<a name =\"" + plugin + "\"></a>"
 		ret += "<h2 name=\"" + plugin + "\">Plugin: " + plugin + "</h2>\n"
 		for version, patchset in versions.iteritems():
-			ret += "<a name =\"" + plugin + version + "\"></a>"
+			ret += "<a name =\"" + plugin + version.replace(' ', '_') + "\"></a>"
 			ret += "<h3>Version: " + version + "</h3>\n"
 			ret += "<ul>\n"
 			for name, p in patchset.iteritems():
